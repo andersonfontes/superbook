@@ -1,0 +1,10 @@
+Django>=4.2,<5.0
+djangorestframework>=3.14
+django-crispy-forms>=2.0
+django-bootstrap4>=23.3
+django-widget-tweaks>=1.5
+django-extensions>=3.2
+django-filter>=23.1
+django-debug-toolbar>=4.2
+django-braces>=1.15
+pillow>=10.0

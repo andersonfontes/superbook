@@ -1,0 +1,21 @@
+[
+  {
+    "model": "superbook.Hero",
+    "pk": 1,
+    "fields": {
+      "codinome": "Acorn",
+      "nome_real": "Desconhecido",
+      "poder_principal": "Superinteligência",
+      "cidade": "Nova York",
+      "historia": "Um esquilo que luta contra o crime."
+    }
+  },
+  {
+    "model": "superbook.Post",
+    "pk": 1,
+    "fields": {
+      "autor": 1,
+      "mensagem": "Bem-vindo ao SuperBook!"
+    }
+  }
+]
