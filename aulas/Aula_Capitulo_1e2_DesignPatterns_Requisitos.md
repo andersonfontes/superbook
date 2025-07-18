@@ -1,4 +1,4 @@
-# Aula Porreta – Capítulos 1 e 2  
+# Projeto Superbook – Capítulos 1 e 2  
 📘 **Design Patterns e Levantamento de Requisitos**
 
 ---
