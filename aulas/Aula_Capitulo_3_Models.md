@@ -170,6 +170,7 @@ Depois vamos relacionar com **Likes** (que é, na prática, a tabela associativa
 ---
 
 ### ✅ **Passo 1: Hero**
+Abra o arquivo heroes/models.py e substitua o conteúdo por:
 
 ```python
 
@@ -197,6 +198,7 @@ class Hero(models.Model):
 ---
 
 ### ✅ **Passo 2: Post**
+Abra o arquivo posts/models.py e substitua o conteúdo por:
 
 ```python
 
@@ -218,6 +220,7 @@ class Post(models.Model):
 ---
 
 ### ✅ **Passo 3: Likes (tabela associativa N:N)**
+Ainda no arquivo posts/models.py e inclua a classe abaixo:
 
 ```python
 
