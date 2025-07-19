@@ -154,7 +154,7 @@ A partir daqui, podemos definir os **Models** para representar as tabelas no ban
 
 ✅ **No Django**, o `ManyToManyField` **cria automaticamente** essa tabela intermediária para você, sem que você precise declarar manualmente.
 
-👉 Se você quiser controle total, pode criar explicitamente a tabela intermediária (como fizemos com o modelo `Like`).
+👉 Se você quiser controle total, pode criar explicitamente a tabela intermediária (como faremos com o modelo `Like`).
 
 ---
 
