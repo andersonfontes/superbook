@@ -282,11 +282,10 @@ Um **fixture** é um arquivo (JSON, YAML ou XML) que contém **dados prontos** p
 
 ---
 
-### Exemplo
+### Exemplo: Crie um arquivo chamado initial_fixture.json com o codigo abaixo:
 
 ```json
-json
-CopiarEditar
+
 [
   {
     "model": "superbook.Hero",
