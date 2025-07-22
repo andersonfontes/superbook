@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Heróis</title>
+</head>
+<body>
+    <h1>Heróis cadastrados</h1>
+    <ul>
+        {% for hero in herois %}
+        <li>{{ hero.codinome }} - {{ hero.poder_principal }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
