@@ -16,11 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('heroes/', include('heroes.urls')),  # rotas do app heroes
-    path('posts/', include('posts.urls')),    # rotas do app posts
-    path('hello/', views.hello_heroes, name='hello_heroes'), #teste view simples
+    #path('posts/', include('posts.urls')),    # rotas do app posts
+    
 ]

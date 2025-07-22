@@ -80,6 +80,12 @@ urlpatterns = [
 
 ```
 
+**Para iniciar o servidor, rode no terminal:**
+```
+python manage.py runserver
+
+```
+
 Pronto! Se acessar **`http://127.0.0.1:8000/heroes/hello/`** você verá só o texto.
 
 ---
