@@ -165,6 +165,11 @@ urlpatterns = [
 ]
 
 ```
+**Para iniciar o servidor, rode no terminal:**
+```
+python manage.py runserver
+
+```
 
 Agora acesse **`http://127.0.0.1:8000/heroes/lista/`** e você verá os heróis renderizados no HTML.
 
