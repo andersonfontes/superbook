@@ -1,6 +1,6 @@
 [
   {
-    "model": "superbook.Hero",
+    "model": "heroes.Hero",
     "pk": 1,
     "fields": {
       "codinome": "Acorn",
@@ -11,7 +11,7 @@
     }
   },
   {
-    "model": "superbook.Post",
+    "model": "posts.Post",
     "pk": 1,
     "fields": {
       "autor": 1,
