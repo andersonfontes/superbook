@@ -170,7 +170,6 @@ Depois vamos relacionar com **Likes** (que é, na prática, a tabela associativa
 ---
 
 ### ✅ **Passo 1: Hero**
-Abra o arquivo heroes/models.py e substitua o conteúdo por:
 
 ```python
 
@@ -198,7 +197,6 @@ class Hero(models.Model):
 ---
 
 ### ✅ **Passo 2: Post**
-Abra o arquivo posts/models.py e substitua o conteúdo por:
 
 ```python
 
@@ -220,7 +218,6 @@ class Post(models.Model):
 ---
 
 ### ✅ **Passo 3: Likes (tabela associativa N:N)**
-Ainda no arquivo posts/models.py e inclua a classe abaixo:
 
 ```python
 
@@ -282,7 +279,7 @@ Um **fixture** é um arquivo (JSON, YAML ou XML) que contém **dados prontos** p
 
 ---
 
-### Exemplo: Crie um arquivo chamado initial_fixture.json com o codigo abaixo:
+### Exemplo
 
 ```json
 
@@ -310,7 +307,6 @@ Um **fixture** é um arquivo (JSON, YAML ou XML) que contém **dados prontos** p
   }
 ]
 
-
 ```
 
 Carregar no banco:
@@ -325,22 +321,44 @@ python manage.py loaddata initial_fixture.json
 
 ## 6️⃣ Testando no Shell
 
+O Django tem um recurso chamado **shell interativo**, que permite acessar o banco de dados e manipular os Models diretamente em Python.
+
+É útil para **testar rapidamente consultas ou inserir dados de teste** sem precisar criar views ou forms.
+
+Para abrir o shell do Django:
+
 ```bash
-
 python manage.py shell
-
 ```
 
+---
+
+### Agora, vamos **buscar um herói**, **ver seus posts** e **criar um post de teste:**
+
+*(Observe que estamos consultando e inserindo dados utilizando python e não SQL. **Isso** é ORM.)*
+
 ```python
+from heroes.models import Hero
+from posts.models import Post
 
-from superbook.models import Hero, Post
-
+# Busca o herói "Acorn" no banco
 h = Hero.objects.get(codinome="Acorn")
-print(h.posts.all())  # Lista posts do herói
 
+# Lista todos os posts relacionados a ele
+print(h.posts.all())
+
+# Cria um novo post para esse herói
 Post.objects.create(autor=h, mensagem="Nova missão no Central Park!")
 
 ```
+
+---
+
+**Explicando rapidamente:**
+
+- `Hero.objects.get()` busca um único herói no banco.
+- `h.posts.all()` mostra os posts que pertencem a esse herói (graças ao `related_name="posts"`).
+- `Post.objects.create()` insere um novo post no banco já associado a esse herói.
 
 ---
 
@@ -355,6 +373,10 @@ Post.objects.create(autor=h, mensagem="Nova missão no Central Park!")
 ✅ Como popular o banco com **fixtures**
 
 ---
+
+## Atividade:
+
+Envie o print do seu repositório atualizado com os models e o seu DB.sqlite atualizado com os dados inseridos através do fixture.json
 
 ## Próximos passos
 
