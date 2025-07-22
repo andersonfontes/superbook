@@ -288,25 +288,28 @@ Um **fixture** é um arquivo (JSON, YAML ou XML) que contém **dados prontos** p
 
 [
   {
-    "model": "superbook.Hero",
+    "model": "heroes.Hero",
     "pk": 1,
     "fields": {
       "codinome": "Acorn",
       "nome_real": "Desconhecido",
       "poder_principal": "Superinteligência",
       "cidade": "Nova York",
-      "historia": "Um esquilo que luta contra o crime."
+      "historia": "Um esquilo que luta contra o crime.",
+      "criado_em": "2025-07-20T12:00:00Z"
     }
   },
   {
-    "model": "superbook.Post",
+    "model": "posts.Post",
     "pk": 1,
     "fields": {
       "autor": 1,
-      "mensagem": "Bem-vindo ao SuperBook!"
+      "mensagem": "Bem-vindo ao SuperBook!",
+      "criado_em": "2025-07-20T12:00:00Z"
     }
   }
 ]
+
 
 ```
 
