@@ -220,7 +220,7 @@ urlpatterns = [
 ]
 ```
 
-Agora acesse **`http://127.0.0.1:8000/heroes/cbv-lista/`**.
+Agora, rode o servidor e acesse **`http://127.0.0.1:8000/heroes/cbv-lista/`**.
 
 Ele vai usar o **mesmo template** sem precisar escrever a lógica manualmente.
 
@@ -253,7 +253,7 @@ URL → View → Template → Response
 
 ---
 
-# ✅ 7️⃣ Mini exercício prático
+# ✅ 7️⃣ Exercício prático
 
 Crie no app `posts`:
 
