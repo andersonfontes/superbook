@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Posts</title>
+</head>
+<body>
+    <h1>Posts cadastrados</h1>
+    <ul>
+        {% for post in posts %}
+        <li>{{ post.autor }} - {{ post.mensagem }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
