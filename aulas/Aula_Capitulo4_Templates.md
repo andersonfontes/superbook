@@ -239,6 +239,21 @@ Depois, qualquer template pode **estender** esse layout:
 
 ```
 
+🔹 Entendendo algumas tags importantes
+{% load static %}
+
+Essa tag carrega o sistema de arquivos estáticos do Django, permitindo usar {% static 'caminho/arquivo.css' %} para acessar imagens, CSS ou JavaScript.
+
+{% block content %} ... {% endblock %}
+
+Define uma área de conteúdo dinâmico em um template que herda de outro.
+
+No base.html, ele marca o local onde cada página filha vai inserir seu conteúdo.
+
+{% block title %} ... {% endblock %}
+
+Funciona do mesmo jeito, mas para definir o título da página ou outras partes personalizáveis
+
 ---
 
 ## ✅ 6️⃣ Arquivos estáticos e Bootstrap
@@ -254,8 +269,7 @@ Vamos usar o **CDN**, que é a forma mais simples (não precisa baixar arquivos)
 Abra ou crie o arquivo **`templates/base.html`** e insira este conteúdo:
 
 ```html
-html
-CopiarEditar
+
 {% load static %}
 <!DOCTYPE html>
 <html>
@@ -296,8 +310,7 @@ Agora vamos deixar a lista de heróis mais bonita, exibindo como **cards**.
 Abra **`heroes/templates/heroes/lista_herois.html`** e substitua por:
 
 ```html
-html
-CopiarEditar
+
 {% extends 'base.html' %}
 
 {% block title %}Lista de Heróis{% endblock %}
