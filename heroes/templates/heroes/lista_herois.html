@@ -6,12 +6,17 @@
 </head>
 
 <body>
-    {% include "partials/menu.html" %}
-    
-    <h1>Heróis cadastrados</h1>
+    {% extends 'base.html' %}
+
+    {% block title %}Lista de Heróis{% endblock %}
+
+    {% block content %}
+    <h2>Heróis cadastrados</h2>
     <ul>
         {% for hero in herois %}
-        <li>{{ hero.codinome }} - {{ hero.poder_principal }}
+        <li>
+            {{ hero.codinome }} - {{ hero.poder_principal }}
+
             {% if hero.cidade == "Nova York" %}
             <p>Este herói protege Nova York!</p>
             {% else %}
@@ -22,6 +27,9 @@
         <li>Nenhum herói cadastrado.</li>
         {% endfor %}
     </ul>
+
+    {% endblock %}
+
 </body>
 
 </html>
