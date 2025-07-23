@@ -222,7 +222,17 @@ Depois, qualquer template pode **estender** esse layout:
 <h2>Heróis cadastrados</h2>
 <ul>
 {% for hero in herois %}
-  <li>{{ hero.codinome }} - {{ hero.poder_principal }}</li>
+    <li>
+        {{ hero.codinome }} - {{ hero.poder_principal }}
+
+        {% if hero.cidade == "Nova York" %}
+            <p>Este herói protege Nova York!</p>
+        {% else %}
+            <p>Herói de outra cidade.</p>
+        {% endif %}
+    </li>
+{% empty %}
+    <li>Nenhum herói cadastrado.</li>
 {% endfor %}
 </ul>
 {% endblock %}
