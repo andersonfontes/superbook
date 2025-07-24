@@ -16,7 +16,7 @@ Durante a aula de Templates, **duplicamos o `base.html` e o `partials/menu.html`
 📌 **Qual o objetivo desta aula?**
 
 - Centralizar arquivos compartilhados em **um único lugar**
-- Aplicar uma **melhor prática de arquitetura** (fica até parecido com um **design pattern DRY – Don’t Repeat Yourself**).
+- Aplicar uma **melhor prática de arquitetura** lembre-se do Design Pattern do Django: **DRY – Don’t Repeat Yourself**)
 - Preparar a base para os próximos módulos (Forms, autenticação etc.).
 
 ---
@@ -64,10 +64,10 @@ Depois da refatoração, vamos ter:
 ```
 
 superbook/
-  templates/
-    base.html
-    partials/
-      menu.html
+    templates/
+        base.html
+        partials/
+            menu.html
 
   heroes/
     templates/heroes/lista_herois.html
